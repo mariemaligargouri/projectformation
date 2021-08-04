@@ -1,0 +1,11 @@
+1- création de server
+2- connect to a database
+3- create a model
+4- création de dossiers 
+*1 config
+*2 model
+*3 routes 
+*4 controllers 
+*5 middlewares
+routes 
+app.method('/exemple',function)

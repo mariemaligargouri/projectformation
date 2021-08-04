@@ -1,0 +1,4 @@
+{
+    "db":"mongodb+srv://mariem:yacine2007@cluster0.oseyj.mongodb.net/medicalweb?retryWrites=true&w=majority",
+    "secret":"it's my secret"
+}
