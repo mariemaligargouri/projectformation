@@ -57,7 +57,7 @@ try {
     exports.login = async (req, res) => {
       const {email, password} = req.body;
       try {
-        const existantPatient = await doctor.findOne({ email });
+        const existantPatient = await patient.findOne({ email });
         if (!existantPatient) return res.status(401).json({ msg: "Bad credentials!!" });
         let isMatch = await bc.compare(password, existantPatient.password);
         if (!isMatch) return res.status(401).json({ msg: "Bad credentials!!" });
@@ -67,7 +67,7 @@ try {
         const token = jwt.sign(payload, secret);
         res.send({
           token,
-          doctor: {
+          patient: {
             _id: existantPatient._id,
             name: existantPatient.name,
             email: existantPatient.email,
